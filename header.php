@@ -16,29 +16,38 @@
 
     <title><?php if(is_home()) { echo bloginfo("name"); echo " - "; echo bloginfo("description"); } else { echo wp_title(" - ", false, right); } ?></title>
 
-    <?php wp_head(); ?>
+    <?php wp_head(); ?> 
   </head>
   <body>
 
-  <nav class="navbar navbar-expand-lg top-bar navbar-static-top sps sps--abv">
-      <div class="container">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      <a class="navbar-brand mx-auto logo-header" href="<?php bloginfo('home') ?>">Scafeli</a>
-        <div class="collapse navbar-collapse" id="navbarCollapse1">
-          <ul class="navbar-nav ml-auto">
-          <li class="nav-item"> <a class="nav-link" href="<?php bloginfo( 'url' ); ?>/sobre">Empresa</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="<?php bloginfo( 'url' ); ?>/cursos">Clientes</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="<?php bloginfo( 'url' ); ?>/cursos">Cases de Sucesso</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="<?php bloginfo( 'url' ); ?>/blog">Blog</a> </li> 
-          <li class="nav-item"> <a class="nav-link" href="<?php bloginfo( 'url' ); ?>/blog">Materiais Ricos</a> </li> 
-          <li class="nav-item"> <a class="nav-link" href="<?php bloginfo( 'url' ); ?>/contato">Contato</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="<?php bloginfo( 'url' ); ?>/contato">Orçamento  </a> </li>
-          </ul>
-        </div>
-      </div>
-  </nav>
+
+<header>
+  <div class="container">
+    <nav class="navbar navbar-expand-md navbar-light">
+   <a class="navbar-brand" href="<?php bloginfo('home') ?>"><?php bloginfo( 'name' ); ?></a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+   <?php
+   wp_nav_menu([
+     'menu'            => 'top',
+     'theme_location'  => 'top',
+     'container'       => 'div',
+     'container_id'    => 'bs4navbar',
+     'container_class' => 'collapse navbar-collapse',
+     'menu_id'         => false,
+     'menu_class'      => 'navbar-nav ml-auto',
+     'depth'           => 2,
+     'fallback_cb'     => 'bs4navwalker::fallback',
+     'walker'          => new bs4navwalker()
+   ]);
+   ?>
+</nav>
+  </div>
+</header>
+
+
+  
 
 
 

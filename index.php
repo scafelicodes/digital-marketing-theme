@@ -3,7 +3,7 @@
 
 <section class="hero">
 	<div class="hero-content">
-		<h1>Você quer vender mais?</h1>
+		<h1><?php bloginfo( 'description' ); ?></h1>
 		<a class="button-hero-home" href="#">sim, eu quero!</a>
 	</div>
 </section>

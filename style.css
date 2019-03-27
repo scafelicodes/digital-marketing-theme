@@ -70,18 +70,6 @@ img {
 	height: auto;
 }
 
-.nav-link {
-    display: block;
-    padding: .5rem 1rem;
-    text-transform: uppercase;
-    color: #606060;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.nav-link:hover {
-    color: #ff6a2b;
-}
 
 .hero-home {
 	padding-top: 80px;
@@ -183,27 +171,6 @@ img {
     box-shadow: 0 12px 34px 0 rgba(0, 0, 0, 0.1);
 }
 
-
-.menu-blog {
-	background-image: -webkit-gradient(linear, left top, right top, from(#ff632d), to(#ff2c77));
-    background-image: linear-gradient(to right, #ff632d, #ff2c77);
-}
-
-.menu-blog .bg-light {
-	background: transparent !important;
-}
-
-.menu-blog .navbar {
-	padding: 1rem 0rem;
-}
-
-.menu-blog .navbar-nav {
-	margin-left: -15px;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: rgb(255, 255, 255);
-}
 
 .block-home {
 	padding: 70px;
